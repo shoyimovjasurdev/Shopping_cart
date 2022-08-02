@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.karzinka{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 3rem;
+  border-radius: 1rem;
+}
+
+.img__karzika{
+  text-align: center;
+
+}
+
+.img__karzika img{
+  width: 300px;
+  height: 200px;
+  border-radius: 1rem;
+  margin: 3rem 0;
+  
+}
+.count__section{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 0.5rem ;
+}
+
+.count__section button{
+  height: min-content;
+  padding: 0 3rem 0.2rem;
+  border-radius: 0.6rem;
+}
+
+.coat__name{
+  margin: auto auto;
+}
+.coat__name h4{
+  padding: 1rem 0 ;
+}
+
+.icon__del{
+  text-align: end;
+}
+.icon__del i{
+  font-size: 2rem;
+  padding: 1rem 1rem 0 0 ;
+}
+

@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.cards{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.main__card{
+  min-width: 30%;
+  margin: 2rem;
+  text-align: center;
+  padding: 2rem 0 ;
+  border-radius: 1rem;
+}
+.main__card img{
+  width: 230px;
+  height: 230px;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+.main__card button{
+  width: 70%;
+  margin: 10px auto 0;
+  border-radius: 0.7rem;
+}
+
+.form__section{
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+.form__section .select__section select{
+  padding: 0.7rem;
+  width: 25vw;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.form__section .dan__gacha input{
+  padding: 0.7rem;
+  margin:0 0.5rem;
+  width: 8vw;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.sorch__section input{
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 2rem auto 3rem;
+
+}
+
+@media only screen and (max-width: 992px) {
+  .cards{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .main__card img{
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .cards{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .main__card img{
+    width: 60%;
+    height: 60%;
+  }
+}
