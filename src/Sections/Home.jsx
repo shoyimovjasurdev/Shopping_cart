@@ -2,18 +2,18 @@ import React,{useState,useEffect} from 'react'
 import Axios from "axios"
 import "../Sections/Home.css"
 import { Link } from 'react-router-dom'
+import {useDispatch,useSelector} from "react-redux"
 
 export default function Header() {
   const [arre,setArre]=useState([])
   const [select, setSelect]=useState([])
-  // const date = select 
-
+  const dispatch = useDispatch()
   useEffect(()=>{
     getStudent()
   }, [])
 
  function getStudent(){
-  Axios.get("http://myjson.dit.upm.es/api/bins/j8nl")
+  Axios.get("http://myjson.dit.upm.es/api/bins/f1r4")
     .then(ress=>{
       setArre(ress.data)
       setSelect(ress.data)
@@ -57,21 +57,18 @@ export default function Header() {
   }
 
   function addFun(e){
-    let massiv = []
-    let localDate = localStorage.getItem("massiv")
-    if(localDate){
-      massiv = JSON.parse(localDate)
-      massiv.push(e)
-      localStorage.setItem("massiv",JSON.stringify(massiv))
-    }else{
-      massiv.push(e)
-      localStorage.setItem("massiv",JSON.stringify(massiv))
-
-    }
+    dispatch({type:"additem",payload:e})
+    // let massiv = []
+    // let localDate = localStorage.getItem("massiv")
+    // if(localDate){
+    //   massiv = JSON.parse(localDate)
+    //   massiv.push(e)
+    //   localStorage.setItem("massiv",JSON.stringify(massiv))
+    // }else{
+    //   massiv.push(e)
+    //   localStorage.setItem("massiv",JSON.stringify(massiv))
+    // }
   }
-
-  
-
   return (
     <div className='container'>
       <div className='form__section'>

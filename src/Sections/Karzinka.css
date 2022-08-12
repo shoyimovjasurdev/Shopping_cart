@@ -4,28 +4,33 @@
   box-sizing: border-box;
 }
 
+.main{
+  position: relative;
+}
+
+
+
 .karzinka{
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  margin-top: 3rem;
-  border-radius: 1rem;
+  grid-template-columns: auto auto auto;
+  margin-top: 2rem;
+  border-radius: .5rem;
 }
 
 .img__karzika{
   text-align: center;
-
 }
 
 .img__karzika img{
   width: 300px;
-  height: 200px;
+  height: 250px;
   border-radius: 1rem;
   margin: 3rem 0;
-  
 }
+
 .count__section{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 0 0.5rem ;
 }
@@ -37,17 +42,78 @@
 }
 
 .coat__name{
-  margin: auto auto;
+  margin: auto 0;
+  text-align: center;
+  text-align: start;
+  padding-left: 5rem;
 }
-.coat__name h4{
-  padding: 1rem 0 ;
+.coat__name h3{
+  padding: 1rem 0;
+  font-size: 14px;
+}
+.coat__name span{
+  color: rgb(154, 47, 47);
 }
 
 .icon__del{
+  top: 0;
+  right:0;
   text-align: end;
 }
 .icon__del i{
+  position: absolute;
   font-size: 2rem;
-  padding: 1rem 1rem 0 0 ;
+  padding: 1rem ;
+  top: 0;
+  right:0;
+}
+.allCost{
+  text-align: center;
+  color: #000;
+  margin: 3rem 0;
+}
+
+.allCost::selection{
+  color: bisque;
+  background-color: rgba(0,0,0,0.4);
+  
+}
+
+@media only screen and (max-width: 992px) {
+  .karzinka{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .coat__name{
+    display: none;
+  }
+  .icon__del i{
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .karzinka{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .coat__name{
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .img__karzika{
+    padding-left:0;
+    margin: auto auto;
+  }
+  .count__section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:0 3rem 1rem 3rem;
+  }
+  .icon__del i{
+    font-size: 1.6rem;
+  }
 }
 
