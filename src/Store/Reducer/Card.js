@@ -6,7 +6,6 @@ function cardReducer(state = initialState, action){
     if(currentCard.indexOf(action.payload)==-1){
       currentCard.push(action.payload)
     }
-
     return state=currentCard
   }
   if(action.type==="deleteitem"){
